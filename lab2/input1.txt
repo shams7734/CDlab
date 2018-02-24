@@ -1,0 +1,6 @@
+// c program to perform itoa operation in c
+
+void main(){
+	int n=a+b-2;
+	printf("hello world\n");
+}

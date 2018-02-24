@@ -1,0 +1,10 @@
+8
+S->aAB
+S->bB
+S->Sa
+A->Ac
+A->d
+B->Bb
+B->e
+C->$
+

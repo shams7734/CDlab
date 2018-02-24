@@ -1,0 +1,48 @@
+string s1,s2;
+	string sub;
+	
+	char ch1;
+	fp=freopen("process.txt","r",stdin);
+	cin>>s1;
+	stack<char> st;
+	st.push('$');
+	
+	st.push(prod[0][0]);
+	
+	for(int i=0;i<(int)s1.length()-1;)
+	{
+		ch1=st.top();
+		if(ch1==s1[i])
+		{
+			st.pop();
+			i++;
+		}
+		if(ch1=='#')
+			st.pop();
+		ch1=st.top();
+		st.pop();
+		cout<<s2<<"asdf"<<s1[i]<<ch1<<endl;
+		if(p[(make_pair(ch1,s1[i]))]=="")
+			break;
+		else
+			s2=p[(make_pair(ch1,s1[i]))];
+		
+		sub=s2.substr(3);
+		cout<<sub<<endl;	
+		for(int j=(int)sub.length();j>0;j--)
+		{
+			st.push(sub[j-1]);
+		}
+		cout<<"top\t"<<st.top()<<endl;
+		cout<<"chal gaya"<<endl;
+	}	
+	
+	if(s1[s1.length()-1]=='$' && st.top()=='$')
+	{
+		cout<<"String accepted"<<endl;
+	}
+	else 
+		cout<<"String not accepted"<<endl;
+	
+			
+  fclose(fp);
